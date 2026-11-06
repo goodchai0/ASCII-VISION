@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { width: 270px; margin: 0; padding: 16px; background: #0a0a0a; color: #00ff41;
+         font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; }
+  h1 { font-size: 15px; margin: 0 0 6px; letter-spacing: 1px; }
+  p { margin: 0 0 12px; color: #4a9; font-size: 11px; line-height: 1.4; }
+  button { width: 100%; padding: 10px; background: #00ff41; color: #000; border: 0;
+           font-family: inherit; font-weight: bold; cursor: pointer; margin-bottom: 14px; }
+  button.off { background: #222; color: #00ff41; border: 1px solid #00ff41; }
+  label { display: block; margin: 10px 0 4px; }
+  select, input { width: 100%; background: #111; color: #00ff41; border: 1px solid #00ff41;
+                  font-family: inherit; padding: 4px; box-sizing: border-box; }
+  small { display: block; margin-top: 12px; color: #4a9; line-height: 1.4; }
+  #status { color: #ff5555; margin-top: 8px; font-size: 11px; }
+</style>
+</head>
+<body>
+  <h1>&gt; ASCII_VISION</h1>
+  <p>Page text becomes terminal style. Images and videos become live ASCII art.</p>
+  <button id="toggle">TURN ON</button>
+  <label for="mode">Color mode</label>
+  <select id="mode">
+    <option value="green">Matrix green</option>
+    <option value="amber">Amber terminal</option>
+    <option value="white">White</option>
+    <option value="color">Full color ASCII</option>
+  </select>
+  <label for="detail">Detail: <span id="detailVal">240</span> max columns</label>
+  <input id="detail" type="range" min="80" max="400" step="20" value="240">
+  <small>Higher detail looks sharper but uses more CPU. Shortcut: Alt + Shift + A</small>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
